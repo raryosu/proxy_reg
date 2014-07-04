@@ -6,13 +6,13 @@ print('Proxy Server')
 print(winreg.QueryValueEx(reg_proxy,'ProxyServer')[0])
 
 if(winreg.QueryValueEx(reg_proxy,'ProxyEnable')[0] == 0) :
-  print('\nProxy Server is unable. Do you want to be able?(y/n)')
+  print('\nプロキシサーバが無効です。有効にしますか？(y/n)')
   if(str(input()) == 'y') :
     flag = 1
   else :
     flag = 0
 else :
-  print('Proxy Server is able. Do you want to be unable?(y/n)')
+  print('プロキシサーバは有効です。無効にしますか？(y/n)')
   if(str(input()) == 'y') :
     flag = 0
   else :
