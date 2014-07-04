@@ -18,5 +18,4 @@ else :
   else :
     flag = 1
 
-if(flag==1):
-  winreg.SetValueEx(reg_proxy, 'ProxyEnable', 0 ,winreg.REG_DWORD, 1)
+winreg.SetValueEx(reg_proxy, 'ProxyEnable', 0 ,winreg.REG_DWORD, flag)
