@@ -1,6 +1,6 @@
 import winreg
 
-reg_proxy = winreg.OpenKey(winreg.HKEY_CURRENT_USER,'Software\Microsoft\Windows\CurrentVersion\Internet Settings',0,)
+reg_proxy = winreg.OpenKey(winreg.HKEY_CURRENT_USER,'Software\Microsoft\Windows\CurrentVersion\Internet Settings',0,winreg.KEY_ALL_ACCESS)
 
 print('Proxy Server')
 print(winreg.QueryValueEx(reg_proxy,'ProxyServer')[0])
